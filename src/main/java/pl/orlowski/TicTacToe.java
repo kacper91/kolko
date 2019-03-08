@@ -23,7 +23,7 @@ public class TicTacToe extends Application {
     private Image cross = new Image("krzyzyk.jpg");
     private Image circle = new Image("kolko.jpg");
     private boolean turn = false;
-    private boolean setA;
+    private boolean check;
     private boolean playerTurn;
 //    private Label status = new Label();
 
@@ -50,9 +50,9 @@ public class TicTacToe extends Application {
         }
     }
 
-    public void turnCheck() {
+    public void checkEmpty() {
 
-        if (setA) {
+        if (check) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Error!");
             alert.setHeaderText("This move is not allowed!");
@@ -60,7 +60,7 @@ public class TicTacToe extends Application {
             alert.showAndWait();
 
         }
-        setA = true;
+        check = true;
 
     }
 
@@ -84,10 +84,13 @@ public class TicTacToe extends Application {
         Button btnA1 = new Button();
         btnA1.setBackground(null);
         btnA1.setOnMouseClicked((e) -> {
-            if (!setA) {
-                btnA1.setGraphic(new ImageView(getTurn()));
-                turnCheck();
 
+            if (!check) {
+                btnA1.setGraphic(new ImageView(getTurn()));
+                checkEmpty();
+
+            } else {
+                System.out.println("Choose another field");
             }
         });
         btnA1.setPrefWidth(200);
