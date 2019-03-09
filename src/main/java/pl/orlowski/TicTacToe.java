@@ -23,7 +23,7 @@ public class TicTacToe extends Application {
     private Image cross = new Image("krzyzyk.jpg");
     private Image circle = new Image("kolko.jpg");
     private boolean turn = false;
-    private boolean check;
+    private boolean check = true;
     private boolean playerTurn;
 //    private Label status = new Label();
 
@@ -52,16 +52,15 @@ public class TicTacToe extends Application {
 
     public void checkEmpty() {
 
-        if (check) {
+        if (!check) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Error!");
             alert.setHeaderText("This move is not allowed!");
             alert.setContentText("Choose another field");
             alert.showAndWait();
-
+        } else {
+            check = false;
         }
-        check = true;
-
     }
 
     public static void main(String[] args) {
@@ -85,12 +84,13 @@ public class TicTacToe extends Application {
         btnA1.setBackground(null);
         btnA1.setOnMouseClicked((e) -> {
 
-            if (!check) {
+            if (check) {
                 btnA1.setGraphic(new ImageView(getTurn()));
                 checkEmpty();
 
             } else {
                 System.out.println("Choose another field");
+
             }
         });
         btnA1.setPrefWidth(200);
@@ -99,13 +99,33 @@ public class TicTacToe extends Application {
 
         Button btnA2 = new Button();
         btnA2.setBackground(null);
-        btnA2.setOnMouseClicked((e) -> btnA2.setGraphic(new ImageView(getTurn())));
+        btnA2.setOnMouseClicked((e) -> {
+
+            if (check) {
+                btnA2.setGraphic(new ImageView(getTurn()));
+                checkEmpty();
+
+            } else {
+                System.out.println("Choose another field");
+
+            }
+        });
         btnA2.setPrefWidth(200);
         btnA2.setPrefHeight(200);
 
         Button btnA3 = new Button();
         btnA3.setBackground(null);
-        btnA3.setOnMouseClicked((e) -> btnA3.setGraphic(new ImageView(getTurn())));
+        btnA3.setOnMouseClicked((e) -> {
+
+            if (check) {
+                btnA3.setGraphic(new ImageView(getTurn()));
+                checkEmpty();
+
+            } else {
+                System.out.println("Choose another field");
+
+            }
+        });
         btnA3.setPrefWidth(200);
         btnA3.setPrefHeight(200);
 
