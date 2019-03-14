@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/pl/orlowski/TicTacToe.java" line="264" mnemonic="9" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/pl/orlowski/TicTacToe.java" line="132" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6cf39572-c1d8-4da9-a1e0-40210973a8da" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/orlowski/ControlGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/orlowski/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/orlowski/ControlGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/orlowski/GameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/orlowski/TicTacToe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/orlowski/TicTacToe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/orlowski/ControlGame.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pl/orlowski/TicTacToe.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/orlowski/TicTacToe.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -32,25 +34,31 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/orlowski/TicTacToe.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1462">
-              <caret line="111" column="8" selection-start-line="111" selection-start-column="8" selection-end-line="111" selection-end-column="8" />
+            <state relative-caret-position="600">
+              <caret line="146" column="42" lean-forward="true" selection-start-line="146" selection-start-column="42" selection-end-line="146" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#934#935#0" expanded="true" />
-                <element signature="e#962#963#0" expanded="true" />
-                <element signature="e#994#995#0" expanded="true" />
-                <element signature="e#1023#1024#0" expanded="true" />
-                <element signature="e#1936#1937#0" expanded="true" />
+                <element signature="e#3102#3103#0" expanded="true" />
+                <element signature="e#3130#3131#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/orlowski/ControlGame.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/orlowski/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="7" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="18" selection-end-column="7" />
+            <state relative-caret-position="51">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/orlowski/GameController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -79,6 +87,8 @@
       <find>stage</find>
       <find>primaryStage</find>
       <find>grid</find>
+      <find>resu</find>
+      <find>next</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -92,6 +102,8 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/orlowski/Hello.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/orlowski/Control.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/orlowski/ControlGame.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/orlowski/GameController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/orlowski/Board.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/orlowski/TicTacToe.java" />
       </list>
     </option>
@@ -115,7 +127,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -165,13 +177,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552234279310" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552584144147" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -201,8 +213,8 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.TicTacToe">
-    <configuration name="ControlGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pl.orlowski.ControlGame" />
+    <configuration name="GameController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pl.orlowski.GameController" />
       <module name="tictoc" />
       <extension name="coverage">
         <pattern>
@@ -243,7 +255,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.TicTacToe" />
-        <item itemvalue="Application.ControlGame" />
+        <item itemvalue="Application.GameController" />
         <item itemvalue="Application.Hello" />
       </list>
     </recent_temporary>
@@ -267,18 +279,19 @@
       <workItem from="1551974033478" duration="5664000" />
       <workItem from="1551988315949" duration="12800000" />
       <workItem from="1552077025752" duration="2208000" />
-      <workItem from="1552132081320" duration="15064000" />
+      <workItem from="1552132081320" duration="19834000" />
+      <workItem from="1552580171210" duration="796000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46126000" />
+    <option name="totallyTimeSpent" value="51692000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20671141" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20939597" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -342,6 +355,9 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/_projekty/_2019/_oprogramowanie/Z1/metadata.cfg">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -349,10 +365,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/orlowski/ControlGame.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/orlowski/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="7" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="18" selection-end-column="7" />
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/orlowski/GameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -361,15 +384,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/orlowski/TicTacToe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1462">
-          <caret line="111" column="8" selection-start-line="111" selection-start-column="8" selection-end-line="111" selection-end-column="8" />
+        <state relative-caret-position="600">
+          <caret line="146" column="42" lean-forward="true" selection-start-line="146" selection-start-column="42" selection-end-line="146" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#934#935#0" expanded="true" />
-            <element signature="e#962#963#0" expanded="true" />
-            <element signature="e#994#995#0" expanded="true" />
-            <element signature="e#1023#1024#0" expanded="true" />
-            <element signature="e#1936#1937#0" expanded="true" />
+            <element signature="e#3102#3103#0" expanded="true" />
+            <element signature="e#3130#3131#0" expanded="true" />
           </folding>
         </state>
       </provider>

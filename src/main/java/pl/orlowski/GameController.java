@@ -3,7 +3,7 @@ package pl.orlowski;
 import pl.orlowski.TicTacToe;
 import javafx.stage.Stage;
 
-public class ControlGame {
+public class GameController {
 //    char[][] plansza = new char[3][3];
 //
 //    public void createGame() {

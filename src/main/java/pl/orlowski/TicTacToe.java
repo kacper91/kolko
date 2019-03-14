@@ -7,6 +7,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
@@ -16,11 +17,11 @@ import javafx.stage.Stage;
 public class TicTacToe extends Application {
 
     private Image imageback = new Image("plansza.jpg");
+    private boolean turn = false;
     private Image cross = new Image("krzyzyk.jpg");
     private Image circle = new Image("kolko.jpg");
-    private boolean turn = false;
     private char mark;
-//    private Label status = new Label();
+    private int end;
 
     private FlowPane figures = new FlowPane(Orientation.HORIZONTAL);
 
@@ -59,7 +60,6 @@ public class TicTacToe extends Application {
             }
             System.out.println("\n");
         }
-
     }
 
     public void showBoard() {
@@ -73,6 +73,46 @@ public class TicTacToe extends Application {
     }
 
 
+    public int checkHorizontal() { //poziom[w][k]
+        if ((plansza[0][0] == plansza[0][1] && plansza[0][1] == plansza[0][2]) ||
+                (plansza[1][0] == plansza[1][1] && plansza[1][1] == plansza[1][2]) ||
+                (plansza[2][0] == plansza[2][1] && plansza[2][1] == plansza[2][2])) {
+            System.out.println("Wygrales-poziom");
+
+        } else {
+
+            System.out.println("jednak nie wygrales");
+        }return end = 1;
+    }
+
+    public int checkVertical() { //pion
+        if ((plansza[0][0] == plansza[1][0] && plansza[1][0] == plansza[2][0]) ||
+                (plansza[0][1] == plansza[1][1] && plansza[1][1] == plansza[2][1]) ||
+                (plansza[0][2] == plansza[1][2] && plansza[1][2] == plansza[2][2])) {
+
+            System.out.println("Wygrales-pion");
+        }return end = 1;
+
+    }
+
+    public int checkCross() { //skos
+        if ((plansza[0][0] == plansza[1][1] && plansza[1][1] == plansza[2][2]) ||
+                (plansza[2][0] == plansza[1][1] && plansza[1][1] == plansza[0][2])) {
+            System.out.println("Wygrales-skos");
+        }return end =1;
+
+    }
+
+   public void endGame(){
+
+        if(end==1){
+            System.out.println("Koniec gry. Wygrałeś");
+
+        }
+
+
+    }
+
     public static void main(String[] args) {
         launch(args);
     }
@@ -85,29 +125,30 @@ public class TicTacToe extends Application {
         BackgroundImage backgroundImage = new BackgroundImage(imageback, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, backgroundSize);
         createGame();
 
+        Label nextMark = new Label();
+        nextMark.setText("Następny znak: " + mark);
+        nextMark.setPrefWidth(300);
+
 
         Button showResult = new Button();
-        showResult.setText("Show Reuslt");
+        showResult.setText("Show Result");
         showResult.setOnMouseClicked((f) -> {
-                    if ((plansza[0][0] == plansza[0][1]) && (plansza[0][1] == plansza[0][2])) {
-                        System.out.println("Wygrales");
+            checkCross();
+            checkHorizontal();
+            checkVertical();
+        });
+        showResult.setPrefWidth(200);
+        showResult.setPrefHeight(20);
 
-                    }
-                    showResult.setPrefWidth(200);
-                    showResult.setPrefHeight(20);
 
-
-                }
-        );
 
         Button newGame = new Button();
         newGame.setText("New Game");
-        newGame.setOnMouseClicked((g)-> {
-        //nowa gra?
+        newGame.setOnMouseClicked((g) -> {
+                    //nowa gra?
 
-        }
+                }
         );
-
 
 
         Button showBoard = new Button();
@@ -130,7 +171,10 @@ public class TicTacToe extends Application {
                 System.out.println("Choose another field");
 
             }
+
         });
+
+
         btnA1.setPrefWidth(200);
         btnA1.setPrefHeight(200);
 
